@@ -45,9 +45,12 @@ final class Fraction : CustomStringConvertible, StringConvertibleNum {
         } else if (self.num == 0) {
             return "\(self.num)"
         }
-        return "\((self.den),(self.num % self.den))/\(self.den)"
-        //return "\(self.num)"
+        //to get simplified fraction e.g. 1 2/3
+            return "\((self.num)/(self.den)) \(self.num % self.den)/\(self.den)"
+        //to get normal fraction 2/3
+            //return "\(self.num)/\(self.den)"
     }
+    
     
     /**
      Default initialiser
